@@ -1,0 +1,196 @@
+﻿<FactProductSales xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wmh="http://www.wmhelp.com/2003/eGenerator" 
+    xsi:schemaLocation="/home/srinivas/Music/FactProductSales.xsd">
+
+    <ProductSales-collection>
+        <ProductSale>
+            <transaction_id>1</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>1</customer_id>
+            <product_id>1</product_id>
+            <quantity>4</quantity>
+            <sales_total_cost>26</sales_total_cost>
+            <product_actual_cost>22</product_actual_cost>
+            <deviation>4</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>2</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>1</customer_id>
+            <product_id>2</product_id>
+            <quantity>2</quantity>
+            <sales_total_cost>48</sales_total_cost>
+            <product_actual_cost>45</product_actual_cost>
+            <deviation>3</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>3</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>1</customer_id>
+            <product_id>3</product_id>
+            <quantity>3</quantity>
+            <sales_total_cost>130.5</sales_total_cost>
+            <product_actual_cost>126</product_actual_cost>
+            <deviation>4.5</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>4</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>2</customer_id>
+            <product_id>3</product_id>
+            <quantity>2</quantity>
+            <sales_total_cost>87</sales_total_cost>
+            <product_actual_cost>84</product_actual_cost>
+            <deviation>3</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>5</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>2</customer_id>
+            <product_id>4</product_id>
+            <quantity>6</quantity>
+            <sales_total_cost>120</sales_total_cost>
+            <product_actual_cost>108</product_actual_cost>
+            <deviation>12</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>6</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>3</customer_id>
+            <product_id>2</product_id>
+            <quantity>4</quantity>
+            <sales_total_cost>26</sales_total_cost>
+            <product_actual_cost>22</product_actual_cost>
+            <deviation>4</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>7</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>3</customer_id>
+            <product_id>3</product_id>
+            <quantity>1</quantity>
+            <sales_total_cost>43.5</sales_total_cost>
+            <product_actual_cost>42</product_actual_cost>
+            <deviation>1.5</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>8</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>3</customer_id>
+            <product_id>4</product_id>
+            <quantity>6</quantity>
+            <sales_total_cost>120</sales_total_cost>
+            <product_actual_cost>108</product_actual_cost>
+            <deviation>12</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>9</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>3</customer_id>
+            <product_id>5</product_id>
+            <quantity>2</quantity>
+            <sales_total_cost>278</sales_total_cost>
+            <product_actual_cost>270</product_actual_cost>
+            <deviation>8</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>10</transaction_id>
+            <store_id>2</store_id>
+            <customer_id>1</customer_id>
+            <product_id>4</product_id>
+            <quantity>3</quantity>
+            <sales_total_cost>60</sales_total_cost>
+            <product_actual_cost>54</product_actual_cost>
+            <deviation>6</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>11</transaction_id>
+            <store_id>2</store_id>
+            <customer_id>1</customer_id>
+            <product_id>5</product_id>
+            <quantity>1</quantity>
+            <sales_total_cost>139</sales_total_cost>
+            <product_actual_cost>135</product_actual_cost>
+            <deviation>4</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>12</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>1</customer_id>
+            <product_id>4</product_id>
+            <quantity>3</quantity>
+            <sales_total_cost>60 </sales_total_cost>
+            <product_actual_cost>54</product_actual_cost>
+            <deviation>6</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>13</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>2</customer_id>
+            <product_id>2</product_id>
+            <quantity>1</quantity>
+            <sales_total_cost>24</sales_total_cost>
+            <product_actual_cost>22.5</product_actual_cost>
+            <deviation>1.50</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>14</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>2</customer_id>
+            <product_id>2</product_id>
+            <quantity>2</quantity>
+            <sales_total_cost>13</sales_total_cost>
+            <product_actual_cost>11</product_actual_cost>
+            <deviation>2</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>15</transaction_id>
+            <store_id>1</store_id>
+            <customer_id>3</customer_id>
+            <product_id>1</product_id>
+            <quantity>2</quantity>
+            <sales_total_cost>24</sales_total_cost>
+            <product_actual_cost>22.5</product_actual_cost>
+            <deviation>1.5</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>16</transaction_id>
+            <store_id>2</store_id>
+            <customer_id>1</customer_id>
+            <product_id>2</product_id>
+            <quantity>1</quantity>
+            <sales_total_cost>6.5</sales_total_cost>
+            <product_actual_cost>5.5</product_actual_cost>
+            <deviation>1</deviation>
+        </ProductSale>
+
+        <ProductSale>
+            <transaction_id>17</transaction_id>
+            <store_id>2</store_id>
+            <customer_id>1</customer_id>
+            <product_id>3</product_id>
+            <quantity>1</quantity>
+            <sales_total_cost>43.5</sales_total_cost>
+            <product_actual_cost>42</product_actual_cost>
+            <deviation>1.5</deviation>
+        </ProductSale>
+
+
+
+    </ProductSales-collection>
+
+</FactProductSales>

@@ -1,0 +1,34 @@
+﻿<DimStores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/apurva/Music/DimStores.xsd">
+	<store-collection>
+		<store>
+			<StoreID>1</StoreID>
+			<StoreAltID>LOC-A1</StoreAltID>
+			<StoreName>X-Mart</StoreName>
+			<StoreLocation>S.P. RingRoad</StoreLocation>
+			<City>Ahmedabad</City>
+			<State>Guj</State>
+			<Country>India</Country>
+		</store>
+		
+		<store>
+			<StoreID>2</StoreID>
+			<StoreAltID>LOC-A2</StoreAltID>
+			<StoreName>Y-Mart</StoreName>
+			<StoreLocation>Maninagar</StoreLocation>
+			<City>Ahmedabad</City>
+			<State>Guj</State>
+			<Country>India</Country>
+		</store>
+		
+		<store>
+			<StoreID>3</StoreID>
+			<StoreAltID>LOC-A3</StoreAltID>
+			<StoreName>Z-Mart</StoreName>
+			<StoreLocation>Sivranjani</StoreLocation>
+			<City>Ahmedabad</City>
+			<State>Guj</State>
+			<Country>India</Country>
+		</store>
+		
+	</store-collection>
+</DimStores>

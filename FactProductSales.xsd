@@ -1,0 +1,98 @@
+﻿<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                          xmlns:target="http://www.w3schools.com"
+                          targetNamespace="http://www.w3schools.com"
+                          xml:dimProd="http://www.w3schools.com/dimProd" 
+                          xml:dimStores="http://www.w3schools.com/dimStores" 
+                          xml:dimCust="http://www.w3schools.com/dimCust" elementFormDefault="qualified">
+
+  <xsd:import namespace="http://www.w3schools.com/dimProd" schemaLocation="dimProd.xsd"/>
+  <xsd:import namespace="http://www.w3schools.com/dimStores" schemaLocation="DimStores.xsd"/>
+  <xsd:import namespace="http://www.w3schools.com/dimCust" schemaLocation="dimcust.xsd"/>
+  
+	<xsd:element name="FactProductSales">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ProductSales-collection"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		
+		<xsd:key name="ProductSales-key">
+      <xsd:selector xpath="ProductSales-collection/ProductSale"/>
+      <xsd:field xpath="transaction_id"/>
+  </xsd:key>
+		
+		<!--
+    <xs:keyref name="dim_cust_ref_key" refer="dimCust:DimCustomer/Customer-key">
+      <xs:selector xpath="Customer-collection/customer"/>
+      <xs:field xpath="customerId"/>
+    </xs:keyref>
+    -->
+    
+
+    <xsd:keyref name="dim_prod_ref_key" refer="dimProd:DimProd/prod_key"/>
+    
+	</xsd:element>
+	
+	<xsd:element name="ProductSales-collection">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ProductSale" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="ProductSale">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="transaction_id"/>
+				<xsd:element ref="store_id"/>
+				<xsd:element ref="customer_id"/>
+				<xsd:element ref="product_id"/>
+				<xsd:element ref="quantity"/>
+				<xsd:element ref="sales_total_cost"/>
+				<xsd:element ref="product_actual_cost"/>
+				<xsd:element ref="deviation"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="transaction_id" type="xs:integer"/>
+	<xsd:element name="store_id" type="xs:integer"/>
+	<xsd:element name="customer_id" type="xs:integer"/>
+	<xsd:element name="product_id" type="xs:integer"/>
+	<xsd:element name="quantity" type="xs:integer"/>
+	<xsd:element name="sales_total_cost" type="xs:decimal"/>
+	<xsd:element name="product_actual_cost" type="xs:decimal"/>
+	<xsd:element name="deviation" type="xs:decimal"/>
+	
+</xsd:schema>
+
+
+
+<!--
+
+foreign key:
+1. xpath = "./" -> directly giving diff file paths in xpath of xs:selector and xs:field 
+2. using different namespace prefixes
+3. 
+
+combining primary key:
+1. 
+2. 
+
+		<xs:key name="auth-key">  -> primary key name.
+			<xs:selector xpath="author-collection/author"/> -> primary key collection 
+			<xs:field xpath="author-id"/>   -> primary key field name.
+		</xs:key>
+
+		<xs:keyref name="auth-ref" refer="auth-key">   -> name: foreign key name. auth-key: is primary key.
+			<xs:selector xpath="book-collection/book"/> 	-> xpath: foreign key collection name
+			<xs:field xpath="author-ref"/> 	-> xpath: foreign key field name
+		</xs:keyref>
+		
+		
+		1. how to combine multiple foreign keys as 1 unique / primary key
+		2. foreign key representations - namespace for primary key table or foreign key table.
+		3. 
+-->
+

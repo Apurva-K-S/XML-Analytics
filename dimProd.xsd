@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:target="http://www.w3schools.com/dimProd" targetNameSpace="http://www.w3schools.com/dimProd" elementFormDefault="qualified">
+  <xs:element name="DimProduct">
+     <xs:complexType>
+           <xs:sequence>
+              <xs:element ref="Product-Collection"/>         
+           </xs:sequence>     
+     </xs:complexType>
+     <xs:key name="prod_key">
+        <xs:selector xpath="Product-Collection/Product"/>
+        <xs:field xpath="ProductKey"/>
+      </xs:key>
+  </xs:element>
+    
+   <xs:element name="Product-Collection">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="Product" maxOccurs="unbounded"/>         
+         </xs:sequence>
+     </xs:complexType>
+   </xs:element>
+     
+  <xs:element name="Product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ProductKey" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="ProductAltKey" minOccurs="1" maxOccurs="1">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="10"/>
+              </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        <xs:element name="ProductName" maxOccurs="1">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="100"/>
+              </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+      <xs:element name="ProductActualCost" type="xs:decimal" maxOccurs="1"/>
+      <xs:element name="ProductSalesCost" type="xs:decimal" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    
+</xs:schema>

@@ -1,0 +1,38 @@
+﻿<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:target="http://www.w3schools.com/dimStores"
+                           targetNameSpace="http://www.w3schools.com/dimStores" elementFormDefault="qualified">
+	<xs:element name="DimStores">
+		<xs:complexType>
+			<xs:sequence>
+			<xs:element ref="store-collection"/>
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:key name="str_key">
+			    <xs:selector xpath="store-collection/store"/>
+			    <xs:field xpath="StoreID"/>
+		</xs:key>
+		
+	</xs:element>
+
+	<xs:element name="store-collection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="store" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="store">
+		<xs:complexType>
+			<xs:sequence>	
+				<xs:element name="StoreID" type="xs:integer" minOccurs = "1"/>
+				<xs:element name="StoreAltID" type="xs:string" minOccurs = "1"/>
+				<xs:element name="StoreName" type="xs:string"/>
+				<xs:element name="StoreLocation" type="xs:string"/>
+				<xs:element name="City" type="xs:string"/>
+				<xs:element name="State" type="xs:string"/>
+				<xs:element name="Country" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

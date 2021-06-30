@@ -1,0 +1,72 @@
+﻿<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.w3schools.com"
+    xmlns:dimCust = "/home/apurva/Music/dimcust.xsd"
+    xmlns:dimStores = "/home/apurva/Music/DimStores.xsd"
+    xmlns:dimProd = "/home/apurva/Music/proj_dim_prod.xsd"
+    elementFormDefault="qualified" >
+
+
+    <xsd:import namespace="" schemaLocation="/home/apurva/Music/dimcust.xsd" />
+    <xsd:import namespace="" schemaLocation="/home/apurva/Music/DimStores.xsd" />
+    <xsd:import namespace="" schemaLocation="/home/apurva/Music/proj_dim_prod.xsd" />
+
+    <xsd:element name="FactProductSales">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element ref="ProductSales-collection"/>
+        </xsd:sequence>
+		 </xsd:complexType>
+
+
+        <!-- Primary key -->
+        <xsd:key name="ProductSales-key">
+            <xsd:selector xpath="ProductSales-collection/ProductSale"/>
+            <xsd:field xpath="transaction_id"/>
+        </xsd:key>
+
+        <!-- unique keys: combining all 3 foreign keys -->
+        <!-- <xs:unique name="factProductSales_unique">
+            // lets first check if all these are working without this combination of dim table foreign keys.
+        </xs:unique> -->
+
+
+        <!-- foreign keys: 3 keys-->
+        <xsd:keyref name="dim_cust_ref_key" refer="dimCust:Customer-collection/customer/CustomerID"/>
+        <xsd:keyref name="dim_prod_ref_key" refer="dimProd:Product-Collection/Product/ProductKey"/>
+        <xsd:keyref name="dim_stores_ref_key" refer="dimStores:store-collection/store/StoreID"/>
+        
+    </xsd:element>
+
+    <xsd:element name="ProductSales-collection">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ProductSale" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="ProductSale">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="transaction_id"/> <!-- primary key -->
+				<xsd:element ref="store_id"/>   <!--- unique key_1 --> <!-- foreign key to dimStores key: str_ID (primary "key name") -->
+				<xsd:element ref="customer_id"/> <!-- unique key_2 --> <!-- foreign key to dimCust key: Customer-key (primary "key name")-->
+				<xsd:element ref="product_id"/> <!-- unique key_3 --> <!-- foreign key to dimProd key: prod_key (primary "key name")-->
+				<xsd:element ref="quantity"/>
+				<xsd:element ref="sales_total_cost"/> 
+				<xsd:element ref="product_actual_cost"/>
+				<xsd:element ref="deviation"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="transaction_id" type="xs:integer"/>
+	<xsd:element name="store_id" type="xs:integer"/>
+	<xsd:element name="customer_id" type="xs:integer"/>
+	<xsd:element name="product_id" type="xs:integer"/>
+	<xsd:element name="quantity" type="xs:integer"/>
+	<xsd:element name="sales_total_cost" type="xs:decimal"/>
+	<xsd:element name="product_actual_cost" type="xs:decimal"/>
+	<xsd:element name="deviation" type="xs:decimal"/>
+
+</xsd:schema>

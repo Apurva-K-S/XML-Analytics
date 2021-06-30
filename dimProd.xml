@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DimProduct xsi:noNamespaceSchemaLocation="/home/apurva/Music/dimProd.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Product-Collection>
+<Product> 
+  <ProductKey>1</ProductKey>
+  <ProductAltKey>ITM-001</ProductAltKey>
+  <ProductName>Wheat Floor 1kg</ProductName>
+  <ProductActualCost>5.50</ProductActualCost>
+  <ProductSalesCost>6.50</ProductSalesCost>
+  </Product>
+  
+  <Product> 
+  <ProductKey>2</ProductKey>
+  <ProductAltKey>ITM-002</ProductAltKey>
+  <ProductName>Rice Grains 1kg</ProductName>
+  <ProductActualCost>22.50</ProductActualCost>
+  <ProductSalesCost>24</ProductSalesCost>
+  </Product>
+  
+  <Product> 
+  <ProductKey>3</ProductKey>
+  <ProductAltKey>ITM-003</ProductAltKey>
+  <ProductName>SunFlower Oil 1 ltr</ProductName>
+  <ProductActualCost>42</ProductActualCost>
+  <ProductSalesCost>43.5</ProductSalesCost>
+  </Product>
+  
+  <Product> 
+  <ProductKey>4</ProductKey>
+  <ProductAltKey>ITM-004</ProductAltKey>
+  <ProductName>Nirma Soap</ProductName>
+  <ProductActualCost>18</ProductActualCost>
+  <ProductSalesCost>20</ProductSalesCost>
+  </Product>
+  
+  <Product> 
+  <ProductKey>5</ProductKey>
+  <ProductAltKey>ITM-005</ProductAltKey>
+  <ProductName>Arial Washing Powder 1kg</ProductName>
+  <ProductActualCost>135</ProductActualCost>
+  <ProductSalesCost>139</ProductSalesCost>
+  </Product>
+  
+  <Product> 
+  <ProductKey>6</ProductKey>
+  <ProductAltKey>ITM-006</ProductAltKey>
+  <ProductName>Wheat Floor 1kg</ProductName>
+  <ProductActualCost>10.50</ProductActualCost>
+  <ProductSalesCost>16.50</ProductSalesCost>
+  </Product>
+  
+  <Product> 
+  <ProductKey>7</ProductKey>
+  <ProductAltKey>ITM-007</ProductAltKey>
+  <ProductName>Rice Grains 1kg</ProductName>
+  <ProductActualCost>32.50</ProductActualCost>
+  <ProductSalesCost>30</ProductSalesCost>
+  </Product>
+  
+<Product> 
+  <ProductKey>8</ProductKey>
+  <ProductAltKey>ITM-008</ProductAltKey>
+  <ProductName>SunFlower Oil 1 ltr</ProductName>
+  <ProductActualCost>62</ProductActualCost>
+  <ProductSalesCost>23.5</ProductSalesCost>
+  </Product>
+  
+  <Product> 
+  <ProductKey>9</ProductKey>
+  <ProductAltKey>ITM-009</ProductAltKey>
+  <ProductName>Nirma Soap</ProductName>
+  <ProductActualCost>28</ProductActualCost>
+  <ProductSalesCost>40</ProductSalesCost>
+  </Product>
+  
+  <Product> 
+  <ProductKey>10</ProductKey>
+  <ProductAltKey>ITM-010</ProductAltKey>
+  <ProductName>Arial Washing Powder 1kg</ProductName>
+  <ProductActualCost>150</ProductActualCost>
+  <ProductSalesCost>189</ProductSalesCost>
+  </Product>
+  
+  </Product-Collection> 
+</DimProduct>

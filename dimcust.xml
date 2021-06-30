@@ -1,0 +1,41 @@
+﻿<DimCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/apurva/Music/dimcust.xsd">
+    
+    <Customer-collection>
+
+        <customer>
+            <CustomerID>1</CustomerID>
+            <CustomerAltID>IMI-001</CustomerAltID>
+            <CustomerName>Henry Ford</CustomerName>
+            <Gender>M</Gender>
+        </customer>
+
+        <customer>
+            <CustomerID>2</CustomerID>
+            <CustomerAltID>IMI-002</CustomerAltID>
+            <CustomerName>Bill Gates</CustomerName>
+            <Gender>M</Gender>
+        </customer>
+
+        <customer>
+            <CustomerID>3</CustomerID>
+            <CustomerAltID>IMI-003</CustomerAltID>
+            <CustomerName>Muskan Shaikh</CustomerName>
+            <Gender>F</Gender>
+        </customer>
+
+        <customer>
+            <CustomerID>4</CustomerID>
+            <CustomerAltID>IMI-004</CustomerAltID>
+            <CustomerName>Richard Thrubin</CustomerName>
+            <Gender>M</Gender>
+        </customer>
+        
+        <customer>
+            <CustomerID>5</CustomerID>
+            <CustomerAltID> IMI-005 </CustomerAltID>
+            <CustomerName>Emma Watson</CustomerName>
+            <Gender>F</Gender>
+        </customer>
+    
+    </Customer-collection>
+</DimCustomer>

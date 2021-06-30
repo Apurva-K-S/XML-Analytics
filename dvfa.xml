@@ -1,0 +1,76 @@
+<?xml version = "1.0"?>
+<!--
+	**** additional schema rules for dvfa.xml file for every datawarehouse **** 
+	for every xml enter the innermost level wrapper tag name for easy processing
+	Example: In factProductSales.xml, the innermost level wrapper is "ProductSale" 
+ 	in the name field just store name of the fact or dimension document without .xml extension
+ 	inside fields object primary key tag name is primary-key, foreign key tag name is foreign-key and
+ 	all other attributes have tag name as field
+ 	
+ 
+-->
+<dvfa-file>
+	
+    <fact-xml-document>
+        <name>factProductSales</name>
+        <schemaPath>/home/apurva/Desktop/DM/project_repo/xml-dataware-house-operations/factProductSales.xsd</schemaPath>
+        <instancePath>/home/apurva/Desktop/DM/project_repo/xml-dataware-house-operations/factProductSales.xml</instancePath>
+        <innermost-wrapper>ProductSale</innermost-wrapper>
+        <fields>
+            <primary-key>transaction_id</primary-key>
+            <foreign-key>store_id</foreign-key>
+            <foreign-key>customer_id</foreign-key>
+            <foreign-key>product_id</foreign-key>
+            <field>quantity</field>
+            <field>sales_total_cost</field>
+            <field>product_actual_cost</field>
+            <field>deviation</field>
+        </fields>
+    </fact-xml-document>
+ 
+    <dimension-xml-documents>
+        <dimension-xml-document>
+            <name>dimcust</name>
+            <schemaPath>/home/apurva/Desktop/DM/project_repo/xml-dataware-house-operations/dimcust.xsd</schemaPath>
+            <instancePath>/home/apurva/Desktop/DM/project_repo/xml-dataware-house-operations/dimcust.xml</instancePath>
+            <innermost-wrapper>customer</innermost-wrapper>
+            <fields>
+                <primary-key>CustomerID</primary-key>
+                <field>CustomerAltID</field>
+                <field>CustomerName</field>
+                <field>Gender</field>
+            </fields>
+        </dimension-xml-document>
+        
+        <dimension-xml-document>
+            <name>dimProd</name>
+            <schemaPath>/home/apurva/Desktop/DM/project_repo/xml-dataware-house-operations/dimProd.xsd</schemaPath>
+            <instancePath>/home/apurva/Desktop/DM/project_repo/xml-dataware-house-operations/dimProd.xml</instancePath>
+            <innermost-wrapper>Product</innermost-wrapper>
+            <fields>
+                <primary-key>ProductKey</primary-key>
+                <field>ProductAltKey</field>
+                <field>ProductName</field>
+                <field>ProductActualCost</field>
+                <field>ProductSalesCost</field>
+            </fields>
+        </dimension-xml-document>
+
+        <dimension-xml-document>
+            <name>DimStores</name>
+            <schemaPath>/home/apurva/Desktop/DM/project_repo/xml-dataware-house-operations/DimStores.xsd</schemaPath>
+            <instancePath>/home/apurva/Desktop/DM/project_repo/xml-dataware-house-operations/DimStores.xml</instancePath>
+            <innermost-wrapper>store</innermost-wrapper>
+            <fields>
+                <primary-key>StoreID</primary-key>
+                <field>StoreAltID</field>
+                <field>StoreName</field>
+                <field>StoreLocation</field>
+                <field>City</field>
+                <field>State</field>
+                <field>Country</field>
+            </fields>
+        </dimension-xml-document>
+    </dimension-xml-documents>
+
+</dvfa-file>

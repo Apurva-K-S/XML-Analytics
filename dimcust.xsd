@@ -1,0 +1,41 @@
+﻿<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:target="http://www.w3schools.com/dimCust" 
+                           targetNameSpace="http://www.w3schools.com/dimCust" elementFormDefault="qualified">
+    <xs:element name="DimCustomer">
+    
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Customer-collection"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:key name="Customer-key">
+        <xs:selector xpath="Customer-collection/customer"/>
+        <xs:field xpath="CustomerID"/>
+    </xs:key>
+
+    </xs:element>
+        <xs:element name="Customer-collection">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="customer" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="customer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="CustomerID" minOccurs="1" maxOccurs="1" />
+                <xs:element ref="CustomerAltID" minOccurs="1"/>
+                <xs:element ref="CustomerName"/>
+                <xs:element ref="Gender"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CustomerID" type="xs:decimal"/>
+    <xs:element name="CustomerAltID" type="xs:string"/>
+    <xs:element name="CustomerName" type="xs:string"/>
+    <xs:element name="Gender" type="xs:string"/>
+
+</xs:schema>
